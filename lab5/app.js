@@ -1,32 +1,51 @@
-import express from 'express';
+js
+import express from "express";
 
-const app=express();
+const app = express();
 
-app.get("/",(req,res)=>{
-    res.send("<h1> Hello Express </h1>")
+// Home
+app.get("/", (req, res) => {
+    res.send("<h1>Hello Express</h1>");
 });
 
-app.get('/about',(req,res)=>{
-    res.send("We are FSD Developer")
-})
+// About
+app.get("/about", (req, res) => {
+    res.send("We are FSD Developer");
+});
 
-app.post('/login',(req,res)=>{
-    res.send({msg:`user login`})
-})
+// Login
+app.post("/login", (req, res) => {
+    res.send({
+        msg: "user login"
+    });
+});
 
-app.put('/user/update/1',(req,res)=>{
-    res.send({msg:`under update`})
-})
+// Update user
+app.put("/user/update/1", (req, res) => {
+    res.send({
+        msg: "under update"
+    });
+});
 
-app.delete('/users/1',(req,res)=>{
-    res.send({msg:`remove user 1`})
-})
+// Delete user
+app.delete("/users/1", (req, res) => {
+    res.send({
+        msg: "remove user 1"
+    });
+});
 
-app.use((req,res)=>{
-    res.status(404).send("Not Found")      // it run in series if i write it first than always show 404 error
-})
+// 404 - MUST BE LAST
+app.use((req, res) => {
+    res.status(404).send("Not Found");
+});
 
-app.listen(3333,()=>console.log("Server is Running at 3333"));
-// server.on("error",(err) == {
-// console.error("Server listen error:",err);
-// });
+// Start server
+const server = app.listen(3333, () => {
+    console.log("Server is running at http://localhost:3333");
+});
+
+// Handle server errors
+server.on("error", (err) => {
+    console.error("Server listen error:", err);
+});
+
