@@ -14,13 +14,13 @@ export function book(){
   return (
     <div>
       <img
-          src="https://m.media-amazon.com/images/I/518+W2zr3BL._AC_UY218_.jpg"
-          alt="Design Pattern React JS"
+          src={b1.picUrl}
+          alt={b1.bname}
        /> 
-      <h1>Lets us react</h1>
-      <h2>price: 765.00</h2>
-      <h3>Quantiy:5</h3>
-      <h4>Rating: 5.0</h4>
+      <h1>{b1.bname}</h1>
+      <h2>{b1.price}</h2>
+      <h3>{b1.quantity}</h3>
+      <h4>{b1.rating}</h4>
     </div>
   );
 }
