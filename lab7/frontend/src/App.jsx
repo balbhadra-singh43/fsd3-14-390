@@ -10,11 +10,19 @@ const b1 = {
   rating: 5.0,
 };
 
-export function book(){
+const b2 = {
+  picUrl: "https://m.media-amazon.com/images/I/51eQekkEKoL._AC_UY218_.jpg",
+  bname: "React js for beginners ",
+  price: 1200,
+  quantity: 5,
+  rating: 4.0,
+};
+
+function book(){
   return (
     <div>
       <img
-          src={b1.picUrl}
+          src={props.book.picUrl}
           alt={b1.bname}
        /> 
       <h1>{b1.bname}</h1>
@@ -28,9 +36,11 @@ export function book(){
 export default function App (){
   return (
     <>
-    <Book />
+    <book book={b1} />
     <h1>Hello React</h1>;
-    <Book />
+    <book book={b2}/>
+    <book book={b1}/>
+    <book book={b2} />
     
     </>
   );
