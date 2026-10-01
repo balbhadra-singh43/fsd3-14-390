@@ -22,3 +22,22 @@
    2. it must start with capital letter.
    3. it should be treated as html  tag.
    4. it must be closed.
+
+   ##Object D structure
+
+   does not depend on other
+   if property is not available then it is initialised 
+   any components include styles--
+   1. external css = create class in index.css and use in components.
+   2. Internal css = create property as object like 
+   '''
+
+   ''' 
+   then apply style attribute and pass the object 
+
+   3. In this method we use two curly bracket with style atribute all the css property must be single word. for example - text/align- textAlign(camel case)
+
+
+   for making components from extention.
+   rafce--- arrow.
+   rfce-- function.
