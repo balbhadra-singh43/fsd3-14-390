@@ -41,3 +41,15 @@
    for making components from extention.
    rafce--- arrow.
    rfce-- function.
+
+   app.js should be minimum code.
+   bydefault button in html is submit button.
+
+   # add tailwind to existing react project
+ 1. open terminal and go to project frontend folder.
+ 2. install tailwind by
+ ` npm install tailwindcss @tailwindcss/vite`
+ 3. open vite.config.js
+ 4. add import tailwindcss from '@tailwindcss/vite' in first line
+ 5. add 'tailwindcss()'
+ 
