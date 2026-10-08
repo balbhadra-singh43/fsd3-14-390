@@ -1,32 +1,26 @@
 import Book from "./components/Book";
-const b1 = {
-  picUrl: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY218_.jpg",
-  bname: "React Design Pattern",
-  price: 1199,
-  quantity: 10,
-  rating: 5.0,
-};
+import Event from "./components/Event";
+import Fruit from "./components/fruit";
+import Pen from "./components/pen";
 
-const b2 = {
-  picUrl: "https://m.media-amazon.com/images/I/518+W2zr3BL._AC_UY218_.jpg",
-  bname: "The Road to React",
-  price: 2886,
-  quantity: 3,
-  rating: 4.5,
-};
+import { books } from "./data/books";
+import { pens } from "./data/pens";
 
-
-
+const MyButton=()=>{
+  let count = 1;
+  const handleSubmit=()=>{
+    console.log("button clicked:", count);
+    count
+    alert("Button clicked");
+  };
+  return(
+    <button className="bg-black text-white text-xl rounded-md m-4 px-4 py-2 " onClick={handleSubmit} >Submit</button>
+  )
+}
 export default function App() {
   return (
     <>
-    <div className="container">
-      <Book book={b1} />
-      
-      <Book book={b2} />
-      <Book book={b1} />
-      <Book book={b2} />
-      </div>
+      <MyButton/>
     </>
   );
 }

@@ -1,15 +1,11 @@
-import React from 'react'
-
-const pen = (props) => {
-    const { picUrl, company, price} = props.pen;
+const Pen = (props) => {
+  const { picUrl, company, price } = props.pen;
   return (
-    <div>
-        <img src={picUrl} alt={company} />
-        <h3>{company}</h3>
-        <h4>Rs. {price}</h4>
-      
+    <div className="book">
+      <img src={picUrl} alt={company} />
+      <h3>{company}</h3>
+      <h4>Rs. {price}</h4>
     </div>
   );
 };
-
-export default pen;
+export default Pen;
